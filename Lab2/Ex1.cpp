@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <ctime> // 
+#include <ctime> 
 #include <cstdlib>
 // program zliczajacy sume nieparzystych wierszy i parzystych kolumn macierzy
 
@@ -19,8 +19,6 @@ int main()
     std::cout<< "\nGive me a number of columns: ";
     std::cin >> column;
     std::vector<std::vector<int>> matrix(lines,std::vector<int>(column,0));
-    //std::cout<<"\n"<<randomNumber;
-    //std::cout<<matrix.size();
 
     for (auto &row : matrix)
     {
@@ -62,20 +60,9 @@ std::vector<int> calcMatrix(std::vector<std::vector<int>> vec)
                 {
                     sumColumns += i;
                 }
-                 itrCol += 1;
+                itrCol += 1;
             }
-        /*else 
-        {
-            for(auto i = 0; i < vec.size(); i++)
-            {
-                if(i%2 == 0  || i == 0)
-                {
-                    int temp = vec[itrLines][i];
-                    sumColumns += temp;
-                }
-            }
-        }
-        */
+
         itrLines += 1;
     } 
     std::vector<int> sum{};

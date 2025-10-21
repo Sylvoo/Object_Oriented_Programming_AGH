@@ -32,5 +32,6 @@ int main()
     std::cout << o<<"\n"; 
     std::cout << s.size()<<"\n";
     
+    
     return 0;
 }

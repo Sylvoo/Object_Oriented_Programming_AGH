@@ -23,7 +23,7 @@ int main()
     std::string userInput;
     std::cout<<"Enter a word to check if it'a a palindrome: ";
     std::getline(std::cin, userInput);
-    std::cout<<"\nNumbers 1/0 means that it is/isn't a palindrome: "<<isPalindrom(userInput);
+    std::cout<<"\nNumbers 1/0 means that it is or isn't a palindrome: "<<isPalindrom(userInput);
     std::cout << "\nVersion with reverse()(below): \n";
 
     std::string temp = userInput;
@@ -34,7 +34,7 @@ int main()
     }
     else
     {
-        std::cout<< "This word is not a palindrome :( )";
+        std::cout<< "This word is not a palindrome";
     }
 
     return 0;
