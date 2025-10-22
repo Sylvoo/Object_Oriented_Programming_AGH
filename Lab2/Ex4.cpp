@@ -6,7 +6,7 @@ int charDetect(const std::string str, char a)
     int num = 0;
     int len = str.length();
     char temp = NULL;
-    //std::cout<<"Lenght: "<<len;
+
     if(isupper(a))
     {
         temp = tolower(a);
@@ -23,8 +23,6 @@ int charDetect(const std::string str, char a)
 
     return num;
 }
-
-
 
 int main()
 {

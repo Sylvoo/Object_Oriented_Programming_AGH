@@ -6,7 +6,7 @@ std::string revStr(std::string str)
 {
     int i = 0;
     int rev = 1;
-    int len = str.length(); // 4, a wiec "\n" nie jest brane pod uwage
+    int len = str.length(); 
     std::string tempString;
     std::cout <<"len: "<<len<<std::endl;
     while(str[i] != '\0')
@@ -29,7 +29,7 @@ int main()
     std::string revUserString = revStr(userStr);
     std::cout<<"\nReversed text without function: "<<revUserString;
 
-    std::reverse(userStr.begin(), userStr.end()); // begin() i end(), zwracaja wskazniki na pierwszy i ostatni element obiektu
+    std::reverse(userStr.begin(), userStr.end()); 
 
     std::cout<<"\nwith reverse() function: "<<userStr;
 

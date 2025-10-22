@@ -1,7 +1,6 @@
 #include<iostream>
 #include<algorithm>
 
-// program ktory sprawdzi czy wpisane slowo jest palindromem 
 
 bool isPalindrom(const std::string str)
 {
@@ -23,8 +22,8 @@ int main()
     std::string userInput;
     std::cout<<"Enter a word to check if it'a a palindrome: ";
     std::getline(std::cin, userInput);
-    std::cout<<"\nNumbers 1/0 means that it is or isn't a palindrome: "<<isPalindrom(userInput);
-    std::cout << "\nVersion with reverse()(below): \n";
+    std::cout<<"\nIt is palindrome: "<<isPalindrom(userInput);
+    std::cout << "\nVersion with reverse(): \n";
 
     std::string temp = userInput;
     std::reverse(userInput.begin(), userInput.end());

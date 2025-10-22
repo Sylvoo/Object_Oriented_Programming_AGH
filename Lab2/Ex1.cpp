@@ -2,14 +2,11 @@
 #include <vector>
 #include <ctime> 
 #include <cstdlib>
-// program zliczajacy sume nieparzystych wierszy i parzystych kolumn macierzy
 
-
-std::vector<int> calcMatrix(std::vector<std::vector<int>> vec); //deklaracja funkcji 
+int doMatrix(std::vector<std::vector<int>> vec); 
 
 int main()
 {
-    // initialize random number generator with current time
     srand(static_cast<unsigned int>(time(0)));
     
 
@@ -25,49 +22,31 @@ int main()
         std::cout<<"\n";
         for (auto &i : row)
         {
-            // generate random number from 0 to 9
             i = rand() % 10;
             std::cout<< i <<" ";
         }
     }
 
     std::cout<<"\n--------------------------------------------\n";
-    std::vector<int> answer = calcMatrix(matrix);
-    std::cout<< "Suma nieparzystych wierszy: "<<answer[0];
-    std::cout<< "\nSuma parzystych kolumn: "<<answer[1];
+    int answer = doMatrix(matrix);
+    std::cout << "Sum: " << answer << "\n";
 
 
     return 0;
 }
 
-std::vector<int> calcMatrix(std::vector<std::vector<int>> vec)
+int doMatrix(std::vector<std::vector<int>> vec)
 {
-    int sumLines = 0;
-    int sumColumns = 0;
-    int itrLines = 0;
-    int itrCol = 0;
-    for (auto &lines : vec)
+    int sum = 0;
+    for (auto i = 0; i < vec.size() ; i++)
     {
-        itrCol = 0;
-        for(auto &i : lines)
+        for (auto j = 0; j < vec[i].size() ; j++)
+        {
+            if(i%2 !=0 || j%2 == 0)
             {
-                if (itrLines % 2 != 0 && itrLines != 0)
-                {
-                    sumLines += i;
-                }
-                
-                if(itrCol == 0 || itrCol % 2 == 0)
-                {
-                    sumColumns += i;
-                }
-                itrCol += 1;
+                sum += vec[i][j];
             }
-
-        itrLines += 1;
-    } 
-    std::vector<int> sum{};
-    sum.push_back(sumLines);
-    sum.push_back(sumColumns);
-
+        }   
+    }
     return sum;
 }
