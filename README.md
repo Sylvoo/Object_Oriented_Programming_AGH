@@ -5,6 +5,7 @@ Repozytorium zawiera kody źródłowe z laboratoriów z przedmiotu **Programowan
 ---
 
 👤 **Autor:** Sylwster Ślusarczyk 
+
 📅 **Rok akademicki:** 2025/2026  
 
 ---
@@ -16,4 +17,5 @@ This repository contains source codes from the **Object-Oriented Programming** l
 ---
 
 👤 **Author:** Sylwester Ślusarczyk
+
 📅 **Academic Year:** 2025/2026
