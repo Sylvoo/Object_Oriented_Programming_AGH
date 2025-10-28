@@ -4,5 +4,16 @@ Repozytorium zawiera kody źródłowe z laboratoriów z przedmiotu **Programowan
 
 ---
 
-👤 **Autor:** Sylwester Ślusarczyk  
-📅 **Rok akademicki:** 2025/2026
+👤 **Autor:** Sylwster Ślusarczyk 
+📅 **Rok akademicki:** 2025/2026  
+
+---
+
+# 🧩 Object-Oriented Programming – Laboratory (AGH EIT)
+
+This repository contains source codes from the **Object-Oriented Programming** laboratory classes held within the **Electronics and Telecommunications (EIT)** program at **AGH University of Science and Technology**.
+
+---
+
+👤 **Author:** Sylwester Ślusarczyk
+📅 **Academic Year:** 2025/2026
