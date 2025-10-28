@@ -9,46 +9,16 @@ Laboratory repo for **Object-Oriented Programming** (AGH EIT) — *Lab 3*.
 
 ## 📌 Scope (Lab 3)
 
-- **Topic:** [Replace with the Lab 3 theme, e.g., Inheritance & Polymorphism / Interfaces / Exceptions / Design Patterns]
+- **Topic:** Into class objects
 - **Goals:**  
-  - Implement [classes/interfaces/patterns] according to the lab spec  
-  - Demonstrate [unit tests / error handling / SOLID principle X]  
+  - Implement   
   - Provide runnable example(s)
 
 ---
 
-## 📁 Project structure
-
-
-*(Adjust to your actual layout — e.g., `app/`, `include/`, `lib/` for C++; or standard Maven/Gradle for Java; or `.csproj` for .NET.)*
-
----
-
 ## 🛠️ Requirements
-
-Choose the stack you use and remove the rest:
-
-### Option A — **Java**
-- JDK 17+
-- **Build**: Gradle or Maven
-
-### Option B — **C++**
+ **C++**
 - CMake ≥ 3.20
 - Compiler supporting C++17 (GCC/Clang/MSVC)
-
-### Option C — **.NET**
-- .NET SDK 8.0+
-
 ---
 
-## ▶️ Build & Run
-
-Pick the variant you use:
-
-### Java (Gradle)
-```bash
-# run
-./gradlew run
-
-# tests
-./gradlew test
