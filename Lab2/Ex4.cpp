@@ -1,13 +1,24 @@
 #include<iostream>
 #include<cctype> // islower() itd
+#include<string>
 
-int charDetect(const std::string str, char a)
+int charDetect(const std::string &str, char a)
 {
     int num = 0;
     int len = str.length();
-    char temp = NULL;
+    a = tolower(a);
 
-    if(isupper(a))
+    for(auto i : str)
+    {
+        
+        if(tolower(i) == a)
+        {
+            num++;
+        }
+    }
+    return num;
+/*
+if(isupper(a))
     {
         temp = tolower(a);
     }
@@ -23,6 +34,8 @@ int charDetect(const std::string str, char a)
 
     return num;
 }
+*/
+}
 
 int main()
 {
@@ -33,7 +46,7 @@ int main()
     std::cout << "\nEnter the char to check it's apperances: ";
     std::cin >> userChar;
 
-    std::cout<<"\nNumber of apperances: "<<charDetect(userInput, userChar);
+    std::cout<<"\nNumber of apperances: "<<charDetect(userInput, userChar)<<std::endl;
 
     return 0;
 }
