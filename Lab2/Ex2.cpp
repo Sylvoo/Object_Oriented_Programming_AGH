@@ -2,7 +2,7 @@
 #include<string>
 #include<algorithm> // biblioteka do reverse()
 
-std::string revStr(std::string str)
+std::string revStr(const std::string &str)
 {
     int i = 0;
     int rev = 1;
@@ -31,7 +31,7 @@ int main()
 
     std::reverse(userStr.begin(), userStr.end()); 
 
-    std::cout<<"\nwith reverse() function: "<<userStr;
+    std::cout<<"\nwith reverse() function: "<<userStr<<std::endl;
 
     return 0;
 }
