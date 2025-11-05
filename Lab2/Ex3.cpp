@@ -1,19 +1,26 @@
 #include<iostream>
 #include<algorithm>
+#include<string>
+
 
 
 bool isPalindrom(const std::string str)
 {
+    int notPali = 0;
     int len = str.length();
-    for(int i = 0; i<len-1; i++)
+    for(int i = 0; i<len; i++)
     {
+      
+        std::cout<<"-------------"<<len<<std::endl;
         char fromStar = str[i];
-        char fromEnd = str[len-i-1];
+        char fromEnd = str[len-i-1]; // abva 
         
         if(fromStar != fromEnd)
-        return false;
-        else return true;
+        {
+            return false;
+        } 
     }
+    return true;
 }
 
 
