@@ -3,7 +3,7 @@
 #include <ctime> 
 #include <cstdlib>
 
-int doMatrix(std::vector<std::vector<int>> vec); 
+int doMatrix(const std::vector<std::vector<int>> &vec); 
 
 int main()
 {
@@ -35,7 +35,7 @@ int main()
     return 0;
 }
 
-int doMatrix(std::vector<std::vector<int>> vec)
+int doMatrix(const std::vector<std::vector<int>> &vec)
 {
     int sum = 0;
     for (auto i = 0; i < vec.size() ; i++)
