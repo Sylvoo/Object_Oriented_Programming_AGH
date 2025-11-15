@@ -29,6 +29,6 @@ public:
     {
         m_real+=other.m_real;
         m_imag+=other.m_imag;
-        return *this; // zwracamy wskaznik do liczby po lewej stronie operatora 
+        return *this; // zwracamy referencje do liczby po lewej stronie operatora 
     }
 };
