@@ -28,14 +28,14 @@ class ComplexNumber
         //return ComplexNumber(m_real+number, m_imag);
     }
 
-    ComplexNumber operator+=(const ComplexNumber& other)
+    ComplexNumber& operator+=(const ComplexNumber& other)
     {
         m_real += other.m_real;
         m_imag += other.m_imag;
         return *this;
     }
 
-    ComplexNumber operator+=(const T number)
+    ComplexNumber& operator+=(const T number)
     {
         m_real += number;
         //m_imag += number;
@@ -53,14 +53,14 @@ class ComplexNumber
         //return ComplexNumber(m_real-number, m_imag);
     }
 
-    ComplexNumber operator-=(const ComplexNumber& other)
+    ComplexNumber& operator-=(const ComplexNumber& other)
     {
         m_real -= other.m_real;
         m_imag -= other.m_imag;
         return *this;
     }
 
-    ComplexNumber operator-=(const T number)
+    ComplexNumber& operator-=(const T number)
     {
         m_real -= number;
         // m_imag -= number;
@@ -72,9 +72,9 @@ class ComplexNumber
         return ComplexNumber(m_real*other.m_real, m_imag*other.m_imag);
     }
 
-    ComplexNumber operator*=(const ComplexNumber& other)
+    ComplexNumber& operator*=(const ComplexNumber& other)
     {
-        m_real *= other.m_real;
+        m_real = m_real * other.m_real + m_imag * other ;
         m_imag *= other.m_imag;
         return *this;
     }
@@ -84,7 +84,7 @@ class ComplexNumber
         return ComplexNumber(m_real/other.m_real, m_imag/other.m_imag);
     }
 
-    ComplexNumber operator/=(const ComplexNumber& other) 
+    ComplexNumber& operator/=(const ComplexNumber& other) 
     {
         m_real /= other.m_real;
         m_imag /= other.m_imag;
@@ -93,18 +93,19 @@ class ComplexNumber
 
     bool operator==(const ComplexNumber& other) const
     {   
-        return (m_real == other.m_real)&&(m_imag==other.m_imag);
+        return (m_real == other.m_real)&&(m_imag == other.m_imag);
     }
 
     bool operator!=(const ComplexNumber& other) const
     {
-        return (m_real != other.m_real)||(m_imag!=other.m_imag);
+        return !(operator==(other));
+        // return !(*this == other)
     }
 
     friend std::ostream& operator<<(std::ostream& os, const ComplexNumber& complex)
     {
         os << complex.m_real << (complex.m_imag > 0 ? " + " : " - ") << abs(complex.m_imag) << "i";
-        return os; // zeby mozna bylo pisac kilka zmiennych, lancuchowo
+        return os; 
     }
 
     // settery, gettery
@@ -128,10 +129,7 @@ class ComplexNumber
         return m_imag;
     }
 
-
-
 };
-
 
 
 
