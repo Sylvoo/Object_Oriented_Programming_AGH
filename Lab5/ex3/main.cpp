@@ -28,5 +28,10 @@ int main()
     //ComplexNumber(name, "kuku");
 
 
+    ComplexNumber cn3(0.0, 0.0);
+
+    std::cout << cn1/cn3 <<std::endl;
+
+
     return 0;
 }
