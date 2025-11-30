@@ -14,7 +14,7 @@ public:
     // std::cout << c1; <- TO TAK NAPRAWDE -> operator<<(std::cout, c1); !!!!!!!!!!!! 
     // metoda klasy moze byc wywolana jedynie na obiekcie tej klasy, po to jest przeciazenie 
     // skoro operator "<<" nie moze byc metoda ComplexNumber
-    // to musi byc funkcja globalna oraz miec dostep do pol prywatnych klasy (m_real, m_imag) i to wlasnie robi FRIEND !!! 
+    // to musi byc funkcja globalna oraz miec dostep do pol prywatnych klasy ComplexNumber(m_real, m_imag) i to wlasnie robi FRIEND !!! 
     friend std::ostream& operator<<(std::ostream& os, const ComplexNumber& c) {
         os << c.m_real << (c.m_imag >= 0 ? " + " : " - ") << std::abs(c.m_imag) << "i";
         // NOTE: returns os (output stream) which allows chaining outputs
